@@ -1,0 +1,88 @@
+@import "../../node_modules/bootstrap/scss/_functions.scss";
+@import "../../node_modules/bootstrap/scss/_variables.scss";
+@import "../../node_modules/bootstrap/scss/_variables-dark.scss";
+@import "../../node_modules/bootstrap/scss/_maps.scss";
+@import "../../node_modules/bootstrap/scss/_mixins.scss";
+@import "../../node_modules/bootstrap/scss/_utilities.scss";
+@import 'variables.scss';
+
+$tf-spacers: (
+        0: 0,
+        '05': .5 * $g-spacing-base,
+        1: $g-spacing-base,
+        2: 2*$g-spacing-base,
+        3: 3*$g-spacing-base,
+        4: 4*$g-spacing-base,
+        5: 5*$g-spacing-base,
+        6: 6*$g-spacing-base,
+        7: 7*$g-spacing-base,
+        8: 8*$g-spacing-base,
+        9: 9*$g-spacing-base,
+        10: 10*$g-spacing-base
+);
+$br-spacers:(
+        'none': 0px,
+        'xs':3px,
+        's':5px,
+        'm':6px,
+        'l':8px,
+        'xl':10px,
+        '2xl':12px
+);
+$utilities: map-merge($utilities,
+                ("margin-top":(property: margin-top,
+                                class: mt,
+                                responsive: true,
+                                values:($tf-spacers))));
+$utilities: map-merge($utilities,
+                ("margin-bottom":(property: margin-bottom,
+                                class: mb,
+                                responsive: true,
+                                values:($tf-spacers))));
+$utilities: map-merge($utilities,
+                ("padding":(property: padding,
+                                class: p,
+                                responsive: true,
+                                values:($tf-spacers))));
+$utilities: map-merge($utilities,
+                ("padding-top":(property: padding-top,
+                                class: pt,
+                                responsive: true,
+                                values:($tf-spacers))));
+$utilities: map-merge($utilities,
+                ("padding-start":(property: padding-left,
+                                class: ps,
+                                responsive: true,
+                                values:($tf-spacers))));
+$utilities: map-merge($utilities,
+                ("padding-end":(property: padding-right,
+                                class: pe,
+                                responsive: true,
+                                values:($tf-spacers))));
+$utilities: map-merge($utilities,
+                ("padding-bottom":(property: padding-bottom,
+                                class: pb,
+                                responsive: true,
+                                values:($tf-spacers))));
+$utilities: map-merge($utilities,
+                ("padding-y":(property: padding-top padding-bottom,
+                                class: py,
+                                responsive: true,
+                                values:($tf-spacers))));
+$utilities: map-merge($utilities,
+                ("padding-x":(property: padding-left padding-right,
+                                class: px,
+                                responsive: true,
+                                values:($tf-spacers))));
+$utilities: map-merge($utilities,
+                ("gap":(property: gap,
+                                class: g,
+                                responsive: true,
+                                values:($tf-spacers))));
+$utilities: map-merge($utilities,
+                ("border-radius":(property: border-radius,
+                                class: br,
+                                responsive: true,
+                                values:($br-spacers))));
+
+@import "../../node_modules/bootstrap/scss/utilities/_api.scss";

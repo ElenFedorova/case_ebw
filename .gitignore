@@ -1,0 +1,5 @@
+
+/WebApp/.vs
+/WebApp/webapp.client/obj
+/WebApp/WebApp.Server/obj
+WebApp/WebApp.Server/WebApp.Server.csproj.user

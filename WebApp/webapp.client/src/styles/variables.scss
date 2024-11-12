@@ -1,0 +1,40 @@
+@use "sass:list";
+@use "sass:map";
+/*Spacing*/
+$g-spacing-base: 4px;
+$g-space-indexes: 0, 0.5, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10;
+$g-spaces: (
+);
+
+@each $size in $g-space-indexes {
+    $g-spaces: map.set($g-spaces, #{$size}, #{$size * $g-spacing-base})
+}
+
+/*g-sizes - sizes in pixels*/
+$g-sizes: (
+);
+
+@each $size in $g-space-indexes {
+    $g-sizes: map.set($g-sizes, #{$size}, #{$size}px);
+}
+
+
+/*Colors*/
+//$g-color-main: #2e7085;
+//$g-color-main: #2461db;
+$g-color-main: #006ebe;
+$g-color-black: #000;
+$g-color-white: #FFF;
+$g-color-over-main: $g-color-black;
+
+/*scrollbar*/
+$g-scrollbar-width: 12px;
+
+/*border-radius*/
+$g-border-radius-xs: 3px;
+$g-border-radius-s: 5px;
+$g-border-radius-m: 6px;
+$g-border-radius-l: 8px;
+$g-border-radius-xl: 10px;
+$g-border-radius-2xl: 16px;
+$g-focus-border-radius: 2px;
